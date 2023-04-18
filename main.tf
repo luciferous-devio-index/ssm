@@ -28,13 +28,13 @@ resource "aws_kms_alias" "encrypt" {
 resource "aws_ssm_parameter" "open_ai_api_key" {
   name   = "/LuciferousDevIoIndex/Secrets/OpenAiApiKey"
   type   = "SecureString"
-  key_id = aws_kms_alias.encrypt.id
+  key_id = aws_kms_alias.encrypt.arn
   value  = var.OPEN_AI_API_KEY
 }
 
 resource "aws_ssm_parameter" "slack_incoming_webhook" {
   name   = "/LuciferousDevIoIndex/Secrets/SlackIncomingWebhook"
   type   = "SecureString"
-  key_id = aws_kms_alias.encrypt.id
+  key_id = aws_kms_alias.encrypt.arn
   value  = var.SLACK_INCOMING_WEBHOOK
 }
