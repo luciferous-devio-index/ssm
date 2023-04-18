@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 env:
-  TF_VARS_OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
-  TF_VARS_SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
+  TF_VAR_OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
+  TF_VAR_SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
 
 jobs:
   deploy:
