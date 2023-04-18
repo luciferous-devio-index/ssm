@@ -18,7 +18,7 @@ jobs:
         with:
           terraform_version: 1.4.5
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-      - uses: aws-actions/configure-aws-credentials@v1-node16
+      - uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ vars.ROLE_ARN_GITHUB_ACTION_SSM_DEPLOY_ROLE }}
           aws-region: ap-northeast-1
